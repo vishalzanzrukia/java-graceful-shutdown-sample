@@ -4,7 +4,7 @@ Sample application to demonstrate the threads to be shutdown gracefully
 ## How to run this project
 `mvn clean package`
 `cd target`
-`java -jar <jarname>` (to run as backgroug process, check below items)
+`java -jar <jarname>` (to run as background process, check below items)
 
 ## Observations
 1. While stopping process from IDE console, it won't executing shutdown hook (tested with Eclipse)
