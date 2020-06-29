@@ -2,8 +2,8 @@
 Sample application to demonstrate the threads to be shutdown gracefully
 
 ## How to run this project
-`mvn clean package`
-`cd target`
+`mvn clean package` <br/>
+`cd target` <br/>
 `java -jar <jarname>` (to run as background process, check below items)
 
 ## Observations
@@ -14,23 +14,27 @@ Sample application to demonstrate the threads to be shutdown gracefully
 
 ## Useful commands for this project
 
+### Run java process on Windows & Linux
+`java -jar test.jar`
+
 ### Run java process in background on Windows
-javaw -jar test.jar
+`javaw -jar test.jar`
 
 ### Run java process in background on Linux
-nohup java -jar test.jar &
+`nohup java -jar test.jar &`
 
-### Finding java process id using command on windows
-C:
-cd "C:\Program Files\Java\jdk1.8.0_162\bin"
-jps -lv
+### Finding java process id using command line on Windows
+`C:` <br/>
+`cd "C:\Program Files\Java\jdk1.8.0_162\bin"` <br/>
+`jps -lv`
 
 ### Kill process on windows
-TASKKILL /F /PID <pid> (only possible with forcefully)
+`TASKKILL /F /<PID>` (forcefully) <br/>
+`TASKKILL /<PID>` (gracefully, this way is not working to kill java background process)
 
-### Finding process id using command on linux
-ps aux | grep java
+### Finding java process ids using command on Linux
+`ps aux | grep java`
 
 ### Kill process on linux 
-kill -9 <pid> (forcefully)
-kill <pid> (gracefully)
+`kill -9 <PID>` (forcefully) <br/>
+`kill <PID>` (gracefully)
